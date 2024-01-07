@@ -3,6 +3,9 @@ package DisciplineJava_01;
 import java.math.BigDecimal;
 
 public class ex_01 {
+    double a;
+    double b;
+
     public static void main(String[] args) {
     // Q1. 38.25 부동 소수점으로 나타내 보세요.
 /*
@@ -59,8 +62,43 @@ public class ex_01 {
     // Q3. 본인이 알고있는 내용만으로 기본형 타입과 참조형 타입에 대해 각각 설명해 보세요.
 
     // 1) Primitive Type(기본형 타입)
+    // 기본형 변수는 실제 값을 저장하는 타입
+    // 기본형 변수 목록
+        // 기본 자료형 변수의 초기화
+        // 논리형
+        boolean DisciplineYn = false; // 논리형(true, false), 1byte
+        if(DisciplineYn == true){ // 기강 여부가 true 값이라면
+            System.out.println("기강 잡혔습니다."); // 해당 메세지 출력
+        }
 
-    // 2) Reference Type(참조형 타입)
+        // 문자형
+        char discipline = 'A'; // 문자형(''), 2byte
+        System.out.println(discipline);
 
+        // 정수형
+        byte byteDiscipline = 127; // -128 ~ 127, 1byte
+        short shortDiscipline = 32757; // -32768 ~ 32767, 2byte
+        int intDiscipline = 2147483647; // -2147483648 ~ 2147483647, 4byte
+        long longDiscipline = 922372036854775807L; // -922372036854775808 ~ 922372036854775807, 8byte
+
+        System.out.println(byteDiscipline);
+        System.out.println(shortDiscipline);
+        System.out.println(intDiscipline);
+        System.out.println(longDiscipline);
+
+        // 실수형
+        float floatDiscipline = 12.45f; // 1.4E-45 ~ 3.4E38, 4byte
+        double doubleDiscipline = 345.24; // 4.9E-324 ~ 1.8E308, 8byte
+
+        // 2) Reference Type(참조형 타입)
+        // 참조형 변수는 객체의 주소를 저장한다.
+        // 위 8개의 기본형을 제외한 나머지 타입.
+
+        // 참조형 타입변수의 초기화
+        ex_01 RefType = new ex_01(); // ex_01 객체를 생성해서, 그 주소를 RefType에 저장.
+        RefType.a = 12.23; // iv로 선언된 a변수 전역변수라고도 불리며 초기화해서 사용한다, 메서드 안에 선언된 지역변수랑 다름
+        RefType.b = 23.45;
+
+        System.out.println(RefType.a + RefType.b);
     }
 }
