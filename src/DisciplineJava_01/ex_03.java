@@ -85,6 +85,7 @@ public class ex_03 {
     // 1) 메모리에 배치된 순서에 따라 알파벳 'a'부터 'z'까지 순서대로 할당해 보세요.
         char[][] az = new char[2][13];
 
+        System.out.println("==== 메모리에 배치된 순서에 따라 알파벳 출력 ====");
         for(int i = 0; i < az.length; i++){
             System.out.print("[");
             for (int y = 0; y < 13; y++){
