@@ -25,13 +25,15 @@ public class ex_02 {
     // Q2. JDK8에서 개선된 문자열 더하기 연산의 처리 방식을 알아보고 설명하세요.
 /*
         1) StringBuilder
+        hint -> StringBuilder를 사용하면 왜 더하기 연산이 개선되는지 알아보자.
 */
 
     // Q3. JDK9에서 문자열 처리 속도를 개선하기 위해 사용된 방식을 알아보고 설명하세요.
 /*
-        1) Compact Strings
-
-        2) Compressed Strings
+        1) Compact Strings == Compressed Strings 같은말임.
+        jdk8에서는 문자를 저장할때마다 2byte 짜리 char[] 자료형에 저장하는데, 그 이유가 한글같은 경우 여러 바이트를 차지하는 경우 때문에 2byte를 한칸으로 정하게 되었다.
+        그래서 영어나 몇몇 언어는 한 글자에 1byte밖에 안쓰는데 2byte를 한 칸으로 지정하여 1byte씩 손해를 보는 경우가 생겼다.
+        jdk9부터는 영어 알파벳 같은 1byte 짜리 애들은 1byte 자료형인 byte에 저장하고 2byte인 애들은 char 저장하게되면서 메모리를 좀 더 컴팩트(뺵빽하게 채우다)하게 사용할 수 있도록 개선되었다.
 
 */
 
