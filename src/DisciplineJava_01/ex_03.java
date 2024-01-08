@@ -70,7 +70,7 @@ public class ex_03 {
         System.out.println("=============검증==============");
         for (int i = 0; i < arr.length; i++){
             System.out.print("[");
-            for (int y = 0; y < arr.length -1; y++){
+            for (int y = 0; y < arr[0].length; y++){
                 if(y != 3){
                     System.out.print(arr[i][y] + ", ");
                 } else {
