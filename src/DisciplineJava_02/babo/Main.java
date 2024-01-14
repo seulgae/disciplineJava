@@ -31,7 +31,7 @@ public class Main {
         // 메소드 블럭 : {~~~}
 
         // Babo 타입의 객체를 만들어 멤버 메소드를 사용할 수 있다.
-        Babo babo = new Babo();
+        DisciplineJava_02.Babo2.Babo babo = new DisciplineJava_02.Babo2.Babo();
         babo.sayName("슬개");
     }
 }

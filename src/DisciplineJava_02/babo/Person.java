@@ -9,8 +9,8 @@ public class Person {
         // P1. 기본 생성자란 아무 인자도 받지 않는 빈 인스턴스를 생성하는 생성자 함수를 말한다.
     }
 
-    public Person(String name){ // name만 받는 생성자
-        this.name = name;
+    public Person(String name/*this가 붙지 않는 name은 매개 변수로 받아온 애를 가르킨다.*/){ // name만 받는 생성자
+        this.name = name; // this가 붙은 name은 자기 자신 인스턴스의 name 즉, Person 객체의 멤버 필드 name을 가르킨다.
     }
 
 /*
@@ -21,9 +21,9 @@ public class Person {
     }
 */
 
-    public Person(String name, int age){ // 모든 인자를 포함한 생성자
+    public Person(String name, int age) { // 모든 인자를 포함한 생성자
         // P2. name과 age를 받는 생성자 함수를 정의해줬기 때문에 기본 생성자를 정의해주지 않으면 사용할 수 없다.
-        this.name = name;
+        this(name); // 이 경우 1번 생성자 함수를 가르킴
         this.age = age;
     }
 
