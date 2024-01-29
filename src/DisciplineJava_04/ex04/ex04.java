@@ -50,7 +50,7 @@ public class ex04 {
         gil.sayHello(); // Hi!!!
         park.sayHello(); // Hello!!!
 
-        park.sayName(); // park
-        gil.sayName(); // gil
+        park.sayName(); // park 30
+        gil.sayName(); // gil 29
     }
 }
