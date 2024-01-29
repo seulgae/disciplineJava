@@ -22,18 +22,11 @@ class Child extends Parent{
         // Expected 1 arguments but found 0 : 1개의 인수가 필요했지만 0개를 찾았습니다.
         super("슬개"); // super : 조상 멤버와 자신 멤버의 구별에 사용한다.
         this.age = age; // 자식 클래스의 멤버
-
-        System.out.println("첫번째 생성자 호출");
-        System.out.println("내 이름은 " + super.firstName + "이고 나이는"+ age + "세 입니다.");
-        System.out.println(lastName + "내 성은 호출할 수 있지만 final 상수값이라 변경이 불가능하다.");
     }
 
     public Child(String firstName,int age){
         super(firstName); // 부모 클래스의 멤버
         this.age = age; // 자식 클래스의 멤버
-
-        System.out.println("두번째 생성자 호출");
-        System.out.println("내 이름은 " + firstName + "이고 나이는"+ age + "세 입니다.");
     }
 
     // private로 설정된 sayMyName() 메서드는 자식인 Child한테 물려주지 않는다.
@@ -42,7 +35,13 @@ class Child extends Parent{
 public class ex01 {
     public static void main(String[] args) {
         Child ex01 = new Child(29);
-        Child ex01_01 = new Child("슬개", 29);
-
+        System.out.println("첫번째 상속받은 메서드 호출");
+        System.out.println("내 이름은 " + ex01.firstName + "이고 나이는"+ ex01.age + "세 입니다.");
+        System.out.println(ex01.lastName + "씨 성은 호출할 수 있지만 final 상수값이라 변경이 불가능하다.");
+        
+        Child ex01_1 = new Child("길태형", 29);
+        System.out.println("두번째 상속받은 메서드 호출");
+        System.out.println("내 이름은 " + ex01_1.firstName + "이고 나이는"+ ex01_1.age + "세 입니다.");
+        System.out.println(ex01.lastName + "씨 성은 호출할 수 있지만 final 상수값이라 변경이 불가능하다.");
     }
 }
