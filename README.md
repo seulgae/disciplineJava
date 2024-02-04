@@ -13,3 +13,5 @@
 
 ### 5, DisciplineJava-05 Review
  - https://idiot2222.github.io/posts/기강_자바-05/
+ - 기강자바 최종과제 : 영화 리뷰 프로그램을 완성하시오.
+ - https://github.com/idiot2222/movie_review_viewer
